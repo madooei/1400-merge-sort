@@ -1,9 +1,9 @@
 package sorts;
 
-/** Merge sort, in a bottom-up version and a recursive version. */
-public final class MergeSort {
+/** Merge sort, the recursive version. */
+public final class MergeSortRecursive {
 
-  private MergeSort() {
+  private MergeSortRecursive() {
     // This class should not be instantiated!
   }
 
@@ -14,20 +14,14 @@ public final class MergeSort {
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Sorts arr in ascending order. Assumes arr is not null.
-  public static void mergeSortBottomUp(int[] arr) {
-    // TODO: Implement me
-    throw new UnsupportedOperationException("TODO: Implement me");
-  }
-
   // Sorts the range arr[start..end-1].
-  private static void mergeSortRecursive(int[] arr, int start, int end) {
+  private static void mergeSort(int[] arr, int start, int end) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Sorts arr in ascending order. Assumes arr is not null.
-  public static void mergeSortRecursive(int[] arr) {
+  public static void mergeSort(int[] arr) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }

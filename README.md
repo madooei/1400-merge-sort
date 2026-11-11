@@ -20,7 +20,8 @@ code/
       sorts/
         MergeTwoSortedArrays.java       # two-pointer merge into a new array
         InPlaceMerge.java               # merge two sorted halves without extra space
-        MergeSort.java                  # bottom-up and recursive versions
+        MergeSortBottomUp.java          # merge sort, bottom-up version
+        MergeSortRecursive.java         # merge sort, recursive version
     test/
       sorts/
         MergeTwoSortedArraysTest.java
@@ -35,7 +36,7 @@ code/
 ## How to compile and run
 
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite.
-- `scripts/test.sh sorts.MergeSortBottomUpTest` — compiles everything and runs only that test class. Use this while you are working on one method and the others are still empty.
+- `scripts/test.sh sorts.MergeSortBottomUpTest` — compiles everything and runs only that test class. Use this while you are working on one class and the others are still empty.
 
 There is no demo program; the tests are how you check your work.
 
@@ -43,6 +44,8 @@ There is no demo program; the tests are how you check your work.
 
 - `sorts.MergeTwoSortedArrays` — `merge(arr1, arr2)`, which returns a new sorted array. Ties take from `arr1`, which keeps the merge stable.
 - `sorts.InPlaceMerge` — `merge(arr, mid)`, which merges the two sorted halves of one array by shifting, with no auxiliary array.
-- `sorts.MergeSort` — `mergeSortBottomUp` and `mergeSortRecursive`, both built on the same private `merge(arr, start, mid, end)`, which merges two sorted ranges of one array.
+- `sorts.MergeSortBottomUp` — `mergeSort`, which merges runs of width 1, 2, 4, and so on, until one run covers the array.
+- `sorts.MergeSortRecursive` — `mergeSort`, which sorts each half recursively with a private `mergeSort(arr, start, end)` and then merges the two halves.
+- Both merge sort classes have their own copy of the same private `merge(arr, start, mid, end)`, which merges two sorted ranges of one array.
 - `sorts.MergeTwoSortedArraysTest` and `sorts.InPlaceMergeTest` — the tests for the two merges.
 - `sorts.MergeSortTest` — the abstract scenario suite for merge sort. It has one subclass per version, `MergeSortBottomUpTest` and `MergeSortRecursiveTest`, so you can test one version alone.
