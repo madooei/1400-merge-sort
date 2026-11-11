@@ -5,6 +5,6 @@ public class MergeSortRecursiveTest extends MergeSortTest {
 
   @Override
   protected void mergeSort(int[] arr) {
-    MergeSort.mergeSortRecursive(arr);
+    MergeSortRecursive.mergeSort(arr);
   }
 }

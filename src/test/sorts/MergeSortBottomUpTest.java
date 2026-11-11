@@ -5,6 +5,6 @@ public class MergeSortBottomUpTest extends MergeSortTest {
 
   @Override
   protected void mergeSort(int[] arr) {
-    MergeSort.mergeSortBottomUp(arr);
+    MergeSortBottomUp.mergeSort(arr);
   }
 }

@@ -1,9 +1,9 @@
 package sorts;
 
-/** Merge sort, in a bottom-up version and a recursive version. */
-public final class MergeSort {
+/** Merge sort, the bottom-up version. */
+public final class MergeSortBottomUp {
 
-  private MergeSort() {
+  private MergeSortBottomUp() {
     // This class should not be instantiated!
   }
 
@@ -31,7 +31,7 @@ public final class MergeSort {
   }
 
   // Sorts arr in ascending order. Assumes arr is not null.
-  public static void mergeSortBottomUp(int[] arr) {
+  public static void mergeSort(int[] arr) {
     int n = arr.length;
     for (int width = 1; width < n; width *= 2) {
       for (int start = 0; start < n; start += 2 * width) {
@@ -40,21 +40,5 @@ public final class MergeSort {
         merge(arr, start, mid, end);
       }
     }
-  }
-
-  // Sorts the range arr[start..end-1].
-  private static void mergeSortRecursive(int[] arr, int start, int end) {
-    if (end - start <= 1) {
-      return;
-    }
-    int mid = start + (end - start) / 2;
-    mergeSortRecursive(arr, start, mid);  // sort the left half
-    mergeSortRecursive(arr, mid, end);  // sort the right half
-    merge(arr, start, mid, end);  // merge the two sorted halves
-  }
-
-  // Sorts arr in ascending order. Assumes arr is not null.
-  public static void mergeSortRecursive(int[] arr) {
-    mergeSortRecursive(arr, 0, arr.length);
   }
 }
