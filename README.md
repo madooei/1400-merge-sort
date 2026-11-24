@@ -45,7 +45,7 @@ code/
 - `scripts/test.sh sorts.MergeSortBottomUpTest` — compiles everything and runs only that test class. Use this while you are working on one class and the others are still empty.
 - `scripts/run.sh demo.MergeSortRecursiveDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
-## What's here
+## Contents
 
 - `sorts.MergeTwoSortedArrays` — `merge(arr1, arr2)`, which returns a new sorted array. Ties take from `arr1`, which keeps the merge stable.
 - `sorts.InPlaceMerge` — `merge(arr, mid)`, which merges the two sorted halves of one array by shifting, with no auxiliary array.
