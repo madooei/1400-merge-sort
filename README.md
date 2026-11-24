@@ -22,6 +22,11 @@ code/
         InPlaceMerge.java               # merge two sorted halves without extra space
         MergeSortBottomUp.java          # merge sort, bottom-up version
         MergeSortRecursive.java         # merge sort, recursive version
+      demo/                             # one demo per solution class
+        MergeTwoSortedArraysDemo.java
+        InPlaceMergeDemo.java
+        MergeSortBottomUpDemo.java
+        MergeSortRecursiveDemo.java
     test/
       sorts/
         MergeTwoSortedArraysTest.java
@@ -31,14 +36,14 @@ code/
         MergeSortRecursiveTest.java
   scripts/
     test.sh                             # compile and run every JUnit test
+    run.sh                              # compile and run one demo
 ```
 
 ## How to compile and run
 
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite.
 - `scripts/test.sh sorts.MergeSortBottomUpTest` — compiles everything and runs only that test class. Use this while you are working on one class and the others are still empty.
-
-There is no demo program; the tests are how you check your work.
+- `scripts/run.sh demo.MergeSortRecursiveDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
 ## What's here
 
@@ -49,3 +54,4 @@ There is no demo program; the tests are how you check your work.
 - Both merge sort classes have their own copy of the same private `merge(arr, start, mid, end)`, which merges two sorted ranges of one array.
 - `sorts.MergeTwoSortedArraysTest` and `sorts.InPlaceMergeTest` — the tests for the two merges.
 - `sorts.MergeSortTest` — the abstract scenario suite for merge sort. It has one subclass per version, `MergeSortBottomUpTest` and `MergeSortRecursiveTest`, so you can test one version alone.
+- `demo.MergeTwoSortedArraysDemo`, `demo.InPlaceMergeDemo`, `demo.MergeSortBottomUpDemo`, and `demo.MergeSortRecursiveDemo` — one demo per class, each on an example from the notes.
